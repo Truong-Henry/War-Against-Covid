@@ -45,6 +45,13 @@ const Chart = ({ covidDeaths, warsInUnitedState }) => {
         {
           ticks: {
             beginAtZero: true,
+            callback: (label, index, labels) => {
+              // Change Y axis to display shorten thousands in K
+              // https://www.chartjs.org/docs/latest/axes/labelling.html
+              if (label === 0) {
+                return 0;
+              } else return label / 1000 + "k";
+            },
           },
         },
       ],
