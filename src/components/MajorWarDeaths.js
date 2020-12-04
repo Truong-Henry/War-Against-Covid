@@ -9,12 +9,12 @@ const MajorWarDeaths = ({ covidDeaths, warsInUnitedState }) => {
   const renderedData = majorWarData.map((war) => {
     const { name, totalDeaths } = war;
     const deathComparison =
-      covidDeaths && parseFloat((covidDeaths.death / totalDeaths).toFixed(2));
+      covidDeaths && parseFloat(covidDeaths.death / totalDeaths);
 
     const deathComparisonMessage =
       deathComparison > 1
-        ? `${deathComparison} times more `
-        : `${deathComparison * 100}% of `;
+        ? `${deathComparison.toFixed(2)} times more `
+        : `${(deathComparison * 100).toFixed(2)}% of `;
     const renderedText = deathComparison && (
       <p className="war-card-rendered-message">
         COVID-19 has taken{" "}
