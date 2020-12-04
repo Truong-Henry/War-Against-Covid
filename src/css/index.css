@@ -94,3 +94,14 @@ html {
   border-radius: 5px;
   width: 95%;
 }
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+  .card {
+    width: 90%;
+  }
+}
