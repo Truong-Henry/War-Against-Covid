@@ -36,7 +36,7 @@ const Chart = ({ covidDeaths, warsInUnitedState }) => {
     title: {
       display: true,
       text: "War Against Covid",
-      fontSize: 25,
+      fontSize: 24,
       fontStyle: "300",
     },
     legend: { display: false, position: "top" },
@@ -63,7 +63,7 @@ const Chart = ({ covidDeaths, warsInUnitedState }) => {
         const chartInstance = this.chart,
           ctx = chartInstance.ctx;
         ctx.textAlign = "center";
-        ctx.font = "300 16px Lato";
+        ctx.font = "300 12px Lato";
         ctx.textBaseline = "bottom";
         // Loop through each data in the datasets
         this.data.datasets.forEach((dataset, i) => {
@@ -79,7 +79,7 @@ const Chart = ({ covidDeaths, warsInUnitedState }) => {
 
   return (
     <div className="chart">
-      <Bar data={chartData} width={100} height={600} options={chartOptions} />
+      <Bar data={chartData} height={600} options={chartOptions} />
     </div>
   );
 };
