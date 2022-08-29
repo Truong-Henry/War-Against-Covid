@@ -1,3 +1,5 @@
+# THE API IS NO LONGER BEING UPDATED. THE AMOUNT OF COVID DEATHS ARE INACCURATE.
+
 # War Against Covid
 
 This application tracks the current COVID deaths in the United States and compares it to major wars throughout the United States history.
